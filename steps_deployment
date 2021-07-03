@@ -1,0 +1,52 @@
+
+1. create VM in cloud and login to the VM suing key pair
+2. Login to the VM using ece-user account.
+3. then create new user account by switching to root users su -u
+
+// some linux command to setup users and create account configuration
+
+1. create new users and give SSH login 
+    creating users - 
+        > sudo adduser <user_name>
+
+    chnage the security context of the account.
+        sudo su - <new user>
+    
+    create .ssh folder in new user account and set permission to 700
+        > chmod 700 .ssh
+
+    use touch command to create authorized_keys file .ssh directory
+        > touch authorized_keys
+
+    set authorized_keys file permission to 600 
+        > chmod 600 .ssh/authorized_keys
+
+2. Seting root user password and assign sudo previledge to user
+    > password
+
+    add user to sudoer group
+    > usermod -aG {wheel|sudo} ninja
+    
+    > add password for user
+       - login as root user
+       - > passws <user_name> 
+
+3. Assign SSH Login to user
+
+    steps
+        1. create new user
+        2. make SSH directory and authorized_keys file in .ssh directory - copy public file
+        3. keep user private file in .ssh directory of the local
+
+4. Nodejs deployment
+
+
+
+
+
+
+    
+
+
+    
+   
